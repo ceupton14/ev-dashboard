@@ -1,0 +1,25 @@
+# ── Whitelist approach: ignore everything, then allow only what's safe to publish ──
+
+# Ignore everything by default
+*
+
+# Allow git config files
+!.gitignore
+
+# Allow only the generated dashboard HTML — these contain no credentials
+!docs/
+!docs/*.html
+
+# Explicitly block sensitive files (belt-and-braces, even though * already catches them)
+.env
+data/
+*.py
+*.command
+*.sh
+*.plist
+*.xlsx
+*.csv
+*.json
+__pycache__/
+.DS_Store
+*.log
